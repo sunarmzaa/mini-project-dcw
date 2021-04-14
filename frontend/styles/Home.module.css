@@ -6,6 +6,133 @@
     justify-content: center;
     align-items: center;
 }
+/*
+.bar{
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:flex-start;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    line-height: 2.5;
+}
+*/
+
+.nav{
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:flex-start;
+    font-size: calc(16px);
+    color: white;
+    line-height: 2.5;
+   
+}
+
+.nav ul {
+    list-style: none;
+    /*background-color: #444;*/
+    background-color: red;
+    text-align: right;
+    margin: 0;
+    padding: 0
+}
+
+.nav li{
+    font-size: 1.2em;
+    line-height: 40px;
+    text-align: left;
+}
+
+.nav Link{
+    text-decoration: none;
+    color: #FFF;
+    display: block;
+    padding-left: 15px;
+    border-bottom: 10px solid #888;
+    transition: .3s;
+}
+
+.nav Link:hover {
+    background-color: #005f5f;
+}
+
+.nav Link:active{
+    background-color: #aaa;
+    color: #444;
+    cursor: default;
+}
+
+.nav li li{
+    font-size: .8em;
+}
+
+/*style menu for larger screen*/
+
+@media screen and (min-width: 650px){
+    .nav li{
+        width: 195px;
+        border-bottom: none;
+        height: 50px;
+        line-height: 50px;
+        font-size: 1.4em;
+        display: inline-block;
+        /*margin-right: -4px;*/
+    }
+
+    .nav Link {
+        border-bottom: none;
+    }
+
+    .nav > ul > li {
+        text-align: center;
+    }
+
+    .nav > ul > li > Link {
+        padding-left: 0px;
+    }
+
+    /*Sub menu*/ 
+
+    .nav li ul {
+        position: absolute;
+        display: none;
+        width: inherit;
+    }
+
+    .nav li:hover ul {
+        display: block;
+    }
+    .nav li ul li {
+        display: block;
+    }
+
+}
+
+
+.body{
+    margin: 0;
+    padding: 0;
+    background: #ccc;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
 
 .content {
     min-width: 25vw;
@@ -33,3 +160,9 @@
     box-sizing: border-box;
     font-size: 1.2rem;
 }
+
+
+
+
+
+

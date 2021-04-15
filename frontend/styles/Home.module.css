@@ -3,9 +3,24 @@
     padding: 0 0.5rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: unset;
     align-items: center;
+    background-color: lightblue;
+    margin: -30px 20px 50px;
+
 }
+.recontainer {
+    min-height: 100vh;
+    padding: 0 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: unset;
+    align-items: center;
+    background-image: url("../image/phuket.jpg");
+    margin: -30px 0px 50px;
+
+}
+
 /*
 .bar{
     background-color: #282c34;
@@ -151,6 +166,7 @@
     text-align: left;
     padding: 10px 0;
     font-size: 1.2rem;
+    background: lightblue;
 }
 
 .gridContainer>div>input {

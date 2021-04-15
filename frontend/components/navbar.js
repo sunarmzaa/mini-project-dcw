@@ -60,6 +60,7 @@ const NavBar = () => {
                             <Link href="/logout">
                                 <MDBBtn rounded color="danger" >logout</MDBBtn>
                             </Link>
+                            
                         </li>
 
                     </ul>

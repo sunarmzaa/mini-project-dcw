@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { Router, useRouter } from 'next/router'
 import Modal from './modal'
 import MovieCreateForm from './movieCreateForm'
-import { createMovie } from '../actions'
+
 
 
 const SideMenu = (props) => {

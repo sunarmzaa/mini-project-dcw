@@ -1,8 +1,11 @@
 import Link from 'next/link'
+import { Navbar, Nav, Form } from 'react-bootstrap'
+import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody, MDBMask, MDBView, MDBIcon, MDBInput, MDBBtn } from "mdbreact";
+
 
 const NavBar = () => {
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top ">
             <div className="container">
                 <a className="navbar-brand" href="/">Travel</a>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,29 +45,36 @@ const NavBar = () => {
                                 <a className="nav-link">Admin</a>
                             </Link>
                         </li>
-                        <li className="nav-item">
-                            <Link href="/logout">
-                                <a className="nav-link">Logout</a>
-                            </Link>
-                        </li>
+
                         <li className="nav-item">
                             <Link href="/contact">
                                 <a className="nav-link">Contact</a>
                             </Link>
                         </li>
-                        <li className="nav-item">
+                        <li className="nav-item red-text font-weight-bold" >
                             <Link href="/about">
                                 <a className="nav-link">About</a>
                             </Link>
                         </li>
-                        
+                        <li className="nav-item">
+                            <Link href="/logout">
+                                <MDBBtn rounded color="danger" >logout</MDBBtn>
+                            </Link>
+                        </li>
+
                     </ul>
                 </div>
             </div>
+            <style jsx>{`
+                .navbar-brand {
+                    color: red;
+                }     
+            `}</style>
+
         </nav>);
 }
 
-export default NavBar; 
+export default NavBar;
 
 
 /*

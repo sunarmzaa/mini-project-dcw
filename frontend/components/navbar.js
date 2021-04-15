@@ -1,4 +1,74 @@
 import Link from 'next/link'
+
+const NavBar = () => {
+    return (
+        <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div className="container">
+                <a className="navbar-brand" href="/">Travel</a>
+                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span className="navbar-toggler-icon"></span>
+                </button>
+                <div className="collapse navbar-collapse" id="navbarResponsive">
+                    <ul className="navbar-nav ml-auto">
+                        <li className="nav-item active">
+                            <Link href="/">
+                                <a className="nav-link">Home
+              <span className="sr-only">(current)</span>
+                                </a>
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link href="/register">
+                                <a className="nav-link" href="#">Register</a>
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link href="/login">
+                                <a className="nav-link">Login</a>
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link href="/profile">
+                                <a className="nav-link">Profile</a>
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link href="/students">
+                                <a className="nav-link">Students</a>
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link href="/admin">
+                                <a className="nav-link">Admin</a>
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link href="/logout">
+                                <a className="nav-link">Logout</a>
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link href="/contact">
+                                <a className="nav-link">Contact</a>
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link href="/about">
+                                <a className="nav-link">About</a>
+                            </Link>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </nav>);
+}
+
+export default NavBar; 
+
+
+/*
+import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 
 const Navbar = () => (
@@ -17,15 +87,4 @@ const Navbar = () => (
 )
 
 export default Navbar
-
-/*
- <Link href="/"><a> Home </a></Link>
-        <Link href="/register"><a> Register </a></Link>
-        <Link href="/login"><a> Login </a></Link>
-        <Link href="/profile"><a> Profile </a></Link>
-        <Link href="/foo"><a> Foo </a></Link>
-        <Link href="/students"><a> Sudents </a></Link>
-        <Link href="/admin"><a> Admin </a></Link>
-        <Link href="/getConfig"><a> Config </a></Link>
-        <Link href="/logout"><a> Logout </a></Link>
-        */
+*/

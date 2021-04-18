@@ -7,9 +7,9 @@ import Navbar from "../components/navbar";
 import index from "./test";
 const URL = "http://localhost/api/students";
 
-//const URL_IN = "http://localhost/api/income";
-
-const emptyImageUrl = '/image/phuket.jpg';
+const URL_IN = "http://localhost/api/income";
+//C:\Users\Admin\Desktop\Mini Project in DCW\frontend\image\add_image.png
+const emptyImageUrl = '/image/add_image.png';
 
 const admin = ({ token }) => {
   const [user, setUser] = useState({});
@@ -21,7 +21,7 @@ const admin = ({ token }) => {
   const [gpa, setGpa] = useState();
 
   ////////////////
-  const [imageUrl, setImageUrl] = useState();
+  const [imageUrl, setImageUrl] = useState(emptyImageUrl);
 
   const handleChangeImage = e => {
     const file = e.target.files[0];
@@ -183,8 +183,9 @@ const admin = ({ token }) => {
         <label className='form-control'>
           <img className='image' src={imageUrl} />
           <input className='input-file' type='file' onChange={handleChangeImage} />
-        </label>
+        </label>  
 
+    
         <button
           className={styles.button_add}
           onClick={() => addStudent(name, surname, major, gpa, imageUrl)}

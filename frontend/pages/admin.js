@@ -5,10 +5,13 @@ import Link from "next/link";
 import withAuth from "../components/withAuth";
 import Navbar from "../components/navbar";
 const URL = "http://localhost/api/students";
+
 const URL_IN = "http://localhost/api/income";
+
+const emptyImageUrl = '/image/phuket.jpg';
+
 const admin = ({ token }) => {
   const [user, setUser] = useState({});
-
   const [students, setStudents] = useState({});
   const [income, setIncome] = useState();
   const [name, setName] = useState("");
@@ -17,12 +20,36 @@ const admin = ({ token }) => {
   const [gpa, setGpa] = useState();
 
 
+  ////////////////
+  //const [imageUrl, setImageUrl] = useState(imageUrl);
+  const [imageUrl, setImageUrl] = useState(emptyImageUrl);
+
+  const handleChangeImage = e => {
+    const file = e.target.files[0];
+    const reader = new FileReader();
+
+    reader.onload = (e) => {
+      setImageUrl(e.target.result)
+    }
+
+    if (file)
+      reader.readAsDataURL(file);
+  }
+
+
+  ///////////////
+
 
   const [student, setStudent] = useState({});
   useEffect(() => {
+    setImageUrl();
     getStudents();
-/*    getIncome();  */
+    /*    getIncome();  */
     profileUser();
+
+
+
+
   }, []);
   const profileUser = async () => {
     try {
@@ -41,12 +68,12 @@ const admin = ({ token }) => {
     console.log(result.data);
     setStudent(result.data);
   };
-/*
-  const getIncome = async () => {
-    let result = await axios.get(URL_IN);
-    setIncome(result.data);
-  };
-*/
+  /*
+    const getIncome = async () => {
+      let result = await axios.get(URL_IN);
+      setIncome(result.data);
+    };
+  */
   const getStudents = async () => {
     let result = await axios.get(URL);
     setStudents(result.data.list);
@@ -58,6 +85,7 @@ const admin = ({ token }) => {
       surname,
       major,
       gpa,
+      imageUrl
     });
     console.log(result);
     getStudents();
@@ -74,21 +102,24 @@ const admin = ({ token }) => {
       surname,
       major,
       gpa,
+      imageUrl
     });
     console.log(result);
     getStudents();
   };
+
 
   const showStudents = () => {
     if (students && students.length) {
       return students.map((item, index) => {
         return (
           <div className={styles.listItem} key={index}>
-          <div><b>Name :</b> {item.name} <br /></div>
-          <div><b>Surname :</b> {item.surname} <br /></div>
-          <div><b>Major :</b> {item.major} <br /></div>
-          <div><b>Gpa :</b> {item.gpa}</div>
-          <div className={styles.edit_button}>
+            <div><b>Name :</b> {item.name} <br /></div>
+            <div><b>Surname :</b> {item.surname} <br /></div>
+            <div><b>Major :</b> {item.major} <br /></div>
+            <div><b>Gpa :</b> {item.gpa}</div>
+            <div><b>Image :</b> {item.imageUrl}</div>
+            <div className={styles.edit_button}>
               <button
                 className={styles.button_get}
                 onClick={() => getStudentById(item.id)}>
@@ -106,7 +137,7 @@ const admin = ({ token }) => {
                 onClick={() => deleteStudent(item.id)}>
                 Delete
               </button>
-              
+
             </div>
           </div>
         );
@@ -141,7 +172,7 @@ const admin = ({ token }) => {
           name="major"
           onChange={(e) => setMajor(e.target.value)}
         ></input>
-        
+
         Gpa :
         <input
           type="number"
@@ -149,13 +180,21 @@ const admin = ({ token }) => {
           onChange={(e) => setGpa(e.target.value)}
         ></input>
 
+        Image:
+        <label className='form-control'>
+          <img className='image' src={imageUrl} />
+          <input className='input-file' type='file' onChange={handleChangeImage} />
+        </label>
+
         <button
           className={styles.button_add}
-          onClick={() => addStudent(name, surname, major, gpa)}
+          onClick={() => addStudent(name, surname, major, gpa, imageUrl)}
         >
           Add
         </button>
       </div>
+
+
 
       <div className={styles.list}>{showStudents()}</div>
     </div>

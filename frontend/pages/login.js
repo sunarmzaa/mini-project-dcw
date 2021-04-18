@@ -89,12 +89,12 @@ export default function Login({ token }) {
         <br />
         {loginForm()}
         <div>
+            <a className="nav-link" href="/register">Register here</a>
           <button onClick={login}>Login</button>
         </div>
 
         <div>
-          <h1 className="h1-responsive font-weight-bold">
-            WELCOME</h1>
+          <h1 className="h1-responsive font-weight-bold" >WELCOME</h1>
           <hr className="hr-light" />
           <h6 className="mb-4">
             ยินดีต้อนรับเข้าสู่เว็บไซต์ไปเที่ยวกาน เชิญเข้ามาแชร์ข้อมูลประสบการณ์การท่องเที่ยวในประเทศไทยที่ประทับใจของท่านให้เพื่อน ๆ

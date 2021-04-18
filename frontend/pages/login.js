@@ -80,7 +80,7 @@ export default function Login({ token }) {
       <Head>
         <title>Login</title>
       </Head>
-      <div className={styles.container}>
+      <div className={styles.locontainer}>
         <Navbar />
         <h1>Login</h1>
 
@@ -96,11 +96,7 @@ export default function Login({ token }) {
         <div>
           <h1 className="h1-responsive font-weight-bold" >WELCOME</h1>
           <hr className="hr-light" />
-          <h6 className="mb-4">
-            ยินดีต้อนรับเข้าสู่เว็บไซต์ไปเที่ยวกาน เชิญเข้ามาแชร์ข้อมูลประสบการณ์การท่องเที่ยวในประเทศไทยที่ประทับใจของท่านให้เพื่อน ๆ
-            ได้รับรู้กันเถอะ
-
-</h6>
+          
         </div>
       </div>
     </Layout>

@@ -16,10 +16,23 @@
     flex-direction: column;
     justify-content: unset;
     align-items: center;
-    background-image: url("../image/phuket.jpg");
+    background-image: url("../image/th.jpg");
     margin: -30px 0px 50px;
 
 }
+.locontainer {
+    min-height: 100vh;
+    padding: 0 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: unset;
+    align-items: center;
+    background-image: url("../image/en.jpg");
+    margin: -30px 0px 50px;
+
+}
+
+
 
 /*
 .bar{

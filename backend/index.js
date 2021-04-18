@@ -127,10 +127,6 @@ let students = {
   ],
 };
 
-
-
-
-
   let income = 0;
 
   router

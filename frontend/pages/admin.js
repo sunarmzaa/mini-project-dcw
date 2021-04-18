@@ -4,9 +4,10 @@ import styles from "../styles/Student.module.css";
 import Link from "next/link";
 import withAuth from "../components/withAuth";
 import Navbar from "../components/navbar";
+import index from "./test";
 const URL = "http://localhost/api/students";
 
-const URL_IN = "http://localhost/api/income";
+//const URL_IN = "http://localhost/api/income";
 
 const emptyImageUrl = '/image/phuket.jpg';
 
@@ -19,10 +20,8 @@ const admin = ({ token }) => {
   const [major, setMajor] = useState("");
   const [gpa, setGpa] = useState();
 
-
   ////////////////
-  //const [imageUrl, setImageUrl] = useState(imageUrl);
-  const [imageUrl, setImageUrl] = useState(emptyImageUrl);
+  const [imageUrl, setImageUrl] = useState();
 
   const handleChangeImage = e => {
     const file = e.target.files[0];

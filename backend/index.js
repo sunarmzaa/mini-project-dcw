@@ -122,8 +122,8 @@ router.get(
 
 let students = {
   list: [
-      { "id": "4010341", "name": "Pheeraphon", "surname": "Kunmuang", "major": "CoE", "gpa": 4.0 ,
-      },
+      { "id": "4010341", "name": "Pheeraphon", "surname": "Kunmuang", "major": "CoE",
+       "gpa": 4.0 , "imageUrl" : '/image/add_app.png'},
       { "id": "4010342", "name": "Foo", "surname": "Bar", "major": "FHT", "gpa": 2.3 },
   ],
 };

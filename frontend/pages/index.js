@@ -18,7 +18,7 @@ export default function Home({ token }) {
         
         <section className="my-5">
           <h2 className="h1-responsive font-weight-bold text-center my-5">
-            ยินดีต้องรับเข้าสู่ "Phakpholami"
+            ยินดีต้องรับเข้าสู่ "สมุนไwร"
         </h2>
           <p className="grey-text w-responsive text-center mx-auto mb-5">
             เว็บไซต์นี้จัดทำขึ้นเพื่อ แนะนำสมุนไพรไทย

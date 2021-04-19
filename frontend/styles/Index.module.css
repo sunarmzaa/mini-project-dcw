@@ -17,6 +17,32 @@
     font-weight: bold;
 }
 
+.sttitle {
+    color: red;
+    font-size: 3rem;
+    margin-top: -300px;
+    font-weight: bold;
+    align-items: center;
+    top: 5px;
+}
+.stlist {
+    display: flex;
+    margin-left: -800px;
+}
+
+
+
+.stcontainer {
+    background-color:antiquewhite;
+    width: 100%;
+    height: 100vh;
+    margin: 0px 5px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*background-image: url("../image/gg.jpg");*/
+}
 .list {
     display: flex;
     margin: 10px;

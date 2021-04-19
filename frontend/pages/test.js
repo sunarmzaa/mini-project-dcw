@@ -39,10 +39,10 @@ const index = () => {
     }
   };
   return (
-    <div className={styles.container}><Navbar />
-      <div className={styles.title}>
+    <div className={styles.stcontainer}><Navbar />
+      <div className={styles.sttitle}>
         Students</div>
-      <div className={styles.list}>
+      <div className={styles.stlist}>
         {showStudents()}
       </div>
 

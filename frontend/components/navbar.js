@@ -5,7 +5,7 @@ import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody, MDBMask, MDBView, M
 
 const NavBar = () => {
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark bg-primary fixed-top ">
+        <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top ">
             <div className="container">
                 <a className="navbar-brand" href="/">สมุนไwร</a>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -53,7 +53,7 @@ const NavBar = () => {
                             </Link>
                         </li>
                         <li className="nav-item red-text font-weight-bold" >
-                            <Link href="/about">
+                            <Link href="/a">
                                 <a className="nav-link">About</a>
                             </Link>
                         </li>

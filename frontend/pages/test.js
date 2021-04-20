@@ -28,7 +28,9 @@ const index = () => {
             <div><b>Surname :</b> {item.surname}</div>
             <div><b>Major :</b> {item.major} </div>
             <div><b>Gpa :</b> {item.gpa}</div>
-            <div><b>Image :</b> {item.imageUrl}</div>
+            {/* <div><b>Image :</b> {item.imageUrl}</div> */}
+            <div><b>Image :</b> <img src={item.imageUrl}/></div>
+
 
             
           </div>

@@ -117,7 +117,9 @@ const admin = ({ token }) => {
             <div><b>Surname :</b> {item.surname} <br /></div>
             <div><b>Major :</b> {item.major} <br /></div>
             <div><b>Gpa :</b> {item.gpa}</div>
-            <div><b>Image :</b> {item.imageUrl}</div>
+            {/* <div><b>Image :</b> {item.imageUrl}</div> */}
+            <div><b>Image :</b> <img src={item.imageUrl}/></div>
+
             <div className={styles.edit_button}>
               <button
                 className={styles.button_get}
@@ -145,6 +147,7 @@ const admin = ({ token }) => {
       return <p>Loading...</p>;
     }
   };
+  console.log(imageUrl);
   return (
     <div className={styles.container}>
       <Navbar />

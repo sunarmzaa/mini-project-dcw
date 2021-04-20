@@ -84,7 +84,7 @@ const admin = ({ token }) => {
       surname,
       major,
       gpa,
-      imageUrl
+      imageUrl,
     });
     console.log(result);
     getStudents();
@@ -101,7 +101,7 @@ const admin = ({ token }) => {
       surname,
       major,
       gpa,
-      imageUrl
+      imageUrl,
     });
     console.log(result);
     getStudents();

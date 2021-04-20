@@ -123,7 +123,7 @@ router.get(
 let students = {
   list: [
       { "id": "4010341", "name": "Pheeraphon", "surname": "Kunmuang", "major": "CoE",
-       "gpa": 4.0 , "imageUrl" : '/image/add_app.png'},
+       "gpa": 4.0 , "imageUrl" : src='./image/add_app.png'},
       { "id": "4010342", "name": "Foo", "surname": "Bar", "major": "FHT", "gpa": 2.3 },
   ],
 };
@@ -163,6 +163,20 @@ let students = {
       students.list[id].major = req.body.major;
       students.list[id].gpa = req.body.gpa;
       students.list[id].imageUrl = req.body.imageUrl;
+
+      ///
+      const handleChangeImage = e => {
+        const file = e.target.files[0];
+        const reader = new FileReader();
+
+        reader.onload = (e) => {
+            setImageUrl(e.target.result)
+        }
+
+        if (file)
+            reader.readAsDataURL(file);
+    }
+    ///////////
       res.json(students.list);
     })
     .delete((req, res) => {

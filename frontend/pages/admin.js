@@ -5,7 +5,7 @@ import Link from "next/link";
 import withAuth from "../components/withAuth";
 import Navbar from "../components/navbar";
 import index from "./test";
-const URL = "http://localhost/api/students";
+const URL = "http://localhost/api/medicines";
 
 const URL_IN = "http://localhost/api/income";
 //C:\Users\Admin\Desktop\Mini Project in DCW\frontend\image\add_image.png
@@ -13,14 +13,14 @@ const emptyImageUrl = '/image/add_image.png';
 
 const admin = ({ token }) => {
   const [user, setUser] = useState({});
-  const [students, setStudents] = useState({});
+  const [medicines, setMedicines] = useState({});
   const [income, setIncome] = useState();
   const [name, setName] = useState("");
-  const [surname, setSurname] = useState("");
-  const [major, setMajor] = useState("");
-  const [gpa, setGpa] = useState();
+  const [description, setDescription] = useState("");
+  const [price, setPrice] = useState();
+  const [quantity, setQuantity] = useState();
 
-  ////////////////
+  //////////////////name  description price quantity  imageUrl 
   const [imageUrl, setImageUrl] = useState(emptyImageUrl);
 
   const handleChangeImage = e => {
@@ -39,10 +39,10 @@ const admin = ({ token }) => {
   ///////////////
 
 
-  const [student, setStudent] = useState({});
+  const [medicine, setMedicine] = useState({});
   useEffect(() => {
     setImageUrl();
-    getStudents();
+    getMedicines();
     /*    getIncome();  */
     profileUser();
 
@@ -62,10 +62,10 @@ const admin = ({ token }) => {
       console.log(e);
     }
   };
-  const getStudentById = async (id) => {
+  const getMedicineById = async (id) => {
     let result = await axios.get(`${URL}/${id}`);
     console.log(result.data);
-    setStudent(result.data);
+    setMedicine(result.data);
   };
   /*
     const getIncome = async () => {
@@ -73,69 +73,69 @@ const admin = ({ token }) => {
       setIncome(result.data);
     };
   */
-  const getStudents = async () => {
+  const getMedicines = async () => {
     let result = await axios.get(URL);
-    setStudents(result.data.list);
+    setMedicines(result.data.list);
   };
-
-  const addStudent = async () => {
+// name  description price quantity  imageUrl 
+  const addMedicine = async () => {
     let result = await axios.post(URL, {
       name,
-      surname,
-      major,
-      gpa,
+      description,
+      price,
+      quantity,                
       imageUrl,
     });
     console.log(result);
-    getStudents();
+    getMedicines();
   };
 
-  const deleteStudent = async (id) => {
+  const deleteMedicine = async (id) => {
     let result = await axios.delete(`${URL}/${id}`);
-    getStudents();
+    getMedicines();
   };
 
-  const updateStudent = async (id) => {
+  const updateMedicine = async (id) => {
     let result = await axios.put(`${URL}/${id}`, {
       name,
-      surname,
-      major,
-      gpa,
+      description,
+      price,
+      quantity,                
       imageUrl,
     });
     console.log(result);
-    getStudents();
+    getMedicines();
   };
 
-
-  const showStudents = () => {
-    if (students && students.length) {
-      return students.map((item, index) => {
+// name  description price quantity  imageUrl 
+  const showMedicines = () => {
+    if (medicines && medicines.length) {
+      return medicines.map((item, index) => {
         return (
           <div className={styles.listItem} key={index}>
             <div><b>Name :</b> {item.name} <br /></div>
-            <div><b>Surname :</b> {item.surname} <br /></div>
-            <div><b>Major :</b> {item.major} <br /></div>
-            <div><b>Gpa :</b> {item.gpa}</div>
+            <div><b>Description :</b> {item.description} <br /></div>
+            <div><b>Price :</b> {item.price} <br /></div>
+            <div><b>Quantity :</b> {item.quantity}</div>
             {/* <div><b>Image :</b> {item.imageUrl}</div> */}
-            <div><b>Image :</b> <img src={item.imageUrl}/></div>
+            <div><b>Image :</b> <img src={item.imageUrl} /></div>
 
             <div className={styles.edit_button}>
               <button
                 className={styles.button_get}
-                onClick={() => getStudentById(item.id)}>
+                onClick={() => getMedicineById(item.id)}>
                 Get
               </button>
 
               <button
                 className={styles.button_update}
-                onClick={() => updateStudent(item.id)}>
+                onClick={() => updateMedicine(item.id)}>
                 Update
               </button>
 
               <button
                 className={styles.button_delete}
-                onClick={() => deleteStudent(item.id)}>
+                onClick={() => deleteMedicine(item.id)}>
                 Delete
               </button>
 
@@ -151,9 +151,10 @@ const admin = ({ token }) => {
   return (
     <div className={styles.container}>
       <Navbar />
-      <h1>Student</h1>
+      <h1>Medicine</h1>
       <div className={styles.form_add}>
-        <h2>Add Students</h2>
+        <h2>Add Medicines</h2>            
+{/* name  description price quantity  imageUrl  */}
         Name :
         <input
           type="text"
@@ -161,45 +162,68 @@ const admin = ({ token }) => {
           onChange={(e) => setName(e.target.value)}
         ></input>
 
-        Surname :
+        Description :
         <input
           type="text"
-          name="surname"
-          onChange={(e) => setSurname(e.target.value)}
+          name="description"
+          onChange={(e) => setDescription(e.target.value)}
         ></input>
 
-        Major :
-        <input
-          type="text"
-          name="major"
-          onChange={(e) => setMajor(e.target.value)}
-        ></input>
-
-        Gpa :
+        Price :
         <input
           type="number"
-          name="gpa"
-          onChange={(e) => setGpa(e.target.value)}
+          name="price"
+          onChange={(e) => setPrice(e.target.value)}
+        ></input>
+
+        Quantity :
+        <input
+          type="number"
+          name="quantity"
+          onChange={(e) => setQuantity(e.target.value)}
         ></input>
 
         Image:
         <label className='form-control'>
           <img className='image' src={imageUrl} />
           <input className='input-file' type='file' onChange={handleChangeImage} />
-        </label>  
+        </label>
 
-    
         <button
           className={styles.button_add}
-          onClick={() => addStudent(name, surname, major, gpa, imageUrl)}
+          onClick={() => addMedicine(name, description, price, quantity, imageUrl)}
         >
           Add
         </button>
       </div>
 
-
-
-      <div className={styles.list}>{showStudents()}</div>
+      <div className={styles.list}>{showMedicines()}</div>
+      <style jsx>{`
+                // .container1 {
+                //     padding: 12px;
+                //     border: 1px solid var(--gray-light2);
+                //     border-radius: 6px;
+                //     max-width: 350px;
+                // }
+                // input, textarea {
+                //     border: 1px solid var(--gray-light2);
+                //     border-radius: 6px;
+                //     padding: 8px;
+                // }
+                // .form-control, p {
+                //     margin-bottom: 4px;
+                //     display: flex;
+                //     flex-direction: column;
+                // }
+                // .image1 {
+                //     width: 80px;
+                //     height: 80px;
+                //     cursor: pointer;
+                // }
+                // .input-file1 {
+                //     display: none;
+                // }
+            `}</style>
     </div>
   );
 };
@@ -208,3 +232,48 @@ export default withAuth(admin);
 export function getServerSideProps({ req, res }) {
   return { props: { token: req.cookies.token || "" } };
 }
+
+
+
+// Name :
+//         <input
+//           type="text"
+//           name="name"
+//           onChange={(e) => setName(e.target.value)}
+//         ></input>
+
+//         Surname :
+//         <input
+//           type="text"
+//           name="surname"
+//           onChange={(e) => setSurname(e.target.value)}
+//         ></input>
+
+//         Major :
+//         <input
+//           type="text"
+//           name="major"
+//           onChange={(e) => setMajor(e.target.value)}
+//         ></input>
+
+//         Gpa :
+//         <input
+//           type="number"
+//           name="gpa"
+//           onChange={(e) => setGpa(e.target.value)}
+//         ></input>
+
+//         Image:
+//         <label className='form-control'>
+//           <img className='image' src={imageUrl} />
+//           <input className='input-file' type='file' onChange={handleChangeImage} />
+//         </label>
+
+
+//         <button
+//           className={styles.button_add}
+//           onClick={() => addStudent(name, surname, major, gpa, imageUrl)}
+//         >
+//           Add
+//         </button>
+//       </div>

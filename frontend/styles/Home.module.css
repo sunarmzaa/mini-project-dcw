@@ -5,7 +5,7 @@
     flex-direction: column;
     justify-content: unset;
     align-items: center;
-    background-color: lightblue;
+    background-color : whitesmoke;
     margin: -30px 20px 50px;
 
 }
@@ -16,7 +16,7 @@
     flex-direction: column;
     justify-content: unset;
     align-items: center;
-    background-image: url("../public/image/th.jpg");
+    background-image: url("../public/image/doc.jpg");
     margin: -30px 0px 50px;
 
 }
@@ -27,7 +27,7 @@
     flex-direction: column;
     justify-content: unset;
     align-items: center;
-    background-image: url("../public/image/en.jpg");
+    background-image: url("../public/image/doc1.jpg");
     margin: -30px 0px 50px;
 
 }

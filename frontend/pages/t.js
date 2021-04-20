@@ -5,7 +5,7 @@ import React, { useState, useEffect } from "react";
 import styles from "../styles/Index.module.css";
 import Link from 'next/link'
 import Navbar from "../components/navbar";
-const URL = "http://localhost/api/medicines";
+const URL = "http://localhost/api/students";
 const URL_BUY = "http://localhost/api/purchase";
 const fetcher = (key) => fetch(key).then((res) => res.json());
 const index = () => {
@@ -20,17 +20,15 @@ const index = () => {
     mutate(URL, data);
   }
 */
-//medicine
- //name  description price quantity  imageUrl 
-  const showMedicines = () => {
+  const showStudents = () => {
     if (data.list && data.list.length) {
       return data.list.map((item, index) => {
         return (
           <div className={styles.listItem} key={index}>
             <div><b>Name :</b> {item.name}</div>
-            <div><b>Description :</b> {item.description}</div>
-            <div><b>Price :</b> {item.price} </div>
-            <div><b>Quantity :</b> {item.quantity}</div>
+            <div><b>Surname :</b> {item.surname}</div>
+            <div><b>Major :</b> {item.major} </div>
+            <div><b>Gpa :</b> {item.gpa}</div>
             {/* <div><b>Image :</b> {item.imageUrl}</div> */}
             <div><b>Image :</b> <img src={item.imageUrl}/></div>
 
@@ -46,9 +44,9 @@ const index = () => {
   return (
     <div className={styles.stcontainer}><Navbar />
       <div className={styles.sttitle}>
-      Medicines</div>
+        Students</div>
       <div className={styles.stlist}>
-        {showMedicines()}
+        {showStudents()}
       </div>
 
     </div>

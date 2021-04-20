@@ -18,10 +18,10 @@ export default function Home({ token }) {
         
         <section className="my-5">
           <h2 className="h1-responsive font-weight-bold text-center my-5">
-            ยินดีต้องรับเข้าสู่ "สมุนไwร"
+            ยินดีต้องรับเข้าสู่ "คุณหมอ"
         </h2>
           <p className="grey-text w-responsive text-center mx-auto mb-5">
-            เว็บไซต์นี้จัดทำขึ้นเพื่อ แนะนำสมุนไพรไทย
+            เว็บไซต์นี้จัดทำขึ้นเพื่อ การจัดเก็บยา
         </p>
         </section>
 
@@ -29,10 +29,10 @@ export default function Home({ token }) {
         <MDBContainer>
           <MDBRow>
             <MDBCol md="12" className="mb-3">
-              <img src="https://static.thairath.co.th/media/4DQpjUtzLUwmJZZO80FuIrIqlLyPCPLL7nFlRT7X0CbG.jpg" className="img-fluid z-depth-1" alt="" />
+              <img src="https://www.tcijthai.com/office-tcij/headpicture/20803a11a27965f6cc4e8dcb554ceff9.jpg" className="img-fluid z-depth-1" alt="" />
             </MDBCol>
           </MDBRow>
-          <MDBRow>
+          {/* <MDBRow>
             <MDBCol lg="4" md="12" className="mb-3">
               <img src="http://www.papamenu.com/wp-content/uploads/2017/05/%E0%B8%82%E0%B9%88%E0%B8%B2.jpg" className="img-fluid z-depth-1" alt="" />
             </MDBCol>
@@ -50,7 +50,7 @@ export default function Home({ token }) {
             <MDBCol md="6" className="mb-3">
               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTH9e2YpNrC18iWqZrx61pqpSvSyo7GzU4W3ai9znpwU8_OBskYEUcA9EM-QSyc1-7-wWs&usqp=CAU" className="img-fluid z-depth-1" alt="" />
             </MDBCol>
-          </MDBRow>
+          </MDBRow> */}
         </MDBContainer>
         </div>
     </div>

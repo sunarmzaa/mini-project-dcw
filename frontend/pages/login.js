@@ -83,7 +83,10 @@ export default function Login({ token }) {
       <div className={styles.locontainer}>
         <Navbar />
         <h1>Login</h1>
-
+        <div>
+          <b>Token:</b> {token.substring(0, 15)}...
+          <button onClick={copyText}> Copy token </button>
+        </div>
         <br />
         <div>Status: {status}</div>
         <br />
@@ -93,11 +96,11 @@ export default function Login({ token }) {
           <button onClick={login}>Login</button>
         </div>
 
-        <div>
+        {/* <div>
           <h1 className="h1-responsive font-weight-bold" >WELCOME</h1>
           <hr className="hr-light" />
           
-        </div>
+        </div> */}
       </div>
     </Layout>
   );

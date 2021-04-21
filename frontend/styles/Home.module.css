@@ -27,13 +27,29 @@
     align-items: center;
     background-color: whitesmoke;
     /* background-image: url("../public/image/doc.jpg"); */
-    margin: 10px 500px 100px;
+    margin: 10px 500px 50px;
+    border: 2px solid black;
+
+}
+
+
+.lo1container {
+    width: 380px;
+    height: 600px;
+    padding: 0 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+    /* background-image: url("../public/image/doc.jpg"); */
+    margin: 10px 500px 50px;
     border: 2px solid black;
 
 }
 .headre{
-    /* background-image: url("../public/image/doc1.jpg"); */
-    background-color: pink;
+    background-image: url("../public/image/20bath.jpg");
+    /* background-color: pink; */
 }
 
 .re{
@@ -52,7 +68,8 @@
     flex-direction: column;
     justify-content: unset;
     align-items: center;
-    background-image: url("../public/image/doc1.jpg");
+    /* background-image: url("../public/image/doc1.jpg"); */
+    background-color: #888;
     margin: -30px 0px 50px;
 
 }
@@ -73,6 +90,12 @@
 }
 */
 
+
+.welcome{
+    margin: 15px;
+    text-align: center;
+    font-size: calc(16px + 2vmin);
+}
 .nav{
     color: white;
     min-height: 100vh;

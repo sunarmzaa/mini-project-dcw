@@ -57,15 +57,18 @@ function App() {
       <div className={styles.head}>
       <form onSubmit={handleUpload}>
         <input type="file" onChange={handleChange} />
-        <button disabled={!file}>upload to firebase</button>
       </form>
       <br></br>
-      Description (รายละเอียด) : 
+      รีวิวสินค้า    
         <input
           type="text"
           name="description"
           onChange={(e) => setDescription(e.target.value)}
         ></input>
+        <br></br>
+        <br></br>
+        <br></br>
+        <button disabled={!file}>upload to firebase</button>
       </div>
     
       <br></br>

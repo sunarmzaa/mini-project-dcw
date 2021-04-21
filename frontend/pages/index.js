@@ -3,7 +3,7 @@ import Layout from '../components/layout'
 import Navbar from '../components/navbar'
 import styles from '../styles/Home.module.css'
 import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody, MDBMask, MDBView ,MDBIcon , MDBInput ,MDBBtn } from "mdbreact";
-
+import { Spring, animated } from 'react-spring'
 
 export default function Home({ token }) {
  
@@ -15,15 +15,36 @@ export default function Home({ token }) {
     <div className={styles.container}>
         <Navbar />
         <div>
-        
+        <div className={styles.welcome}>
+
+        <Spring
+                loop
+                from={{ opacity: 0, color: 'red' }}
+                to={[
+                    { opacity: 1, color: '#ffaaee' },
+                    { opacity: 0, color: 'rgb(14,26,19)' },
+                ]}>
+                {styles => (
+                    <animated.div style={styles}>ยินดีต้องรับเข้าสู่ "จะเอ๋ 20</animated.div>
+                )}
+            </Spring>
+
+            </div>             
+            
+
         <section className="my-5">
-          <h2 className="h1-responsive font-weight-bold text-center my-5">
+          {/* <h2 className="h1-responsive font-weight-bold text-center my-5">
             ยินดีต้องรับเข้าสู่ "จะเอ๋ 20"
-        </h2>
+        </h2> */}
           <p className="grey-text w-responsive text-center mx-auto mb-5">
-            เว็บไซต์นี้จัดทำขึ้นเพื่อ การสต็อกสินค้าภายในร้าน
+            เว็บไซต์นี้จัดทำขึ้นเพื่อ การสต็อกสินค้าภายในร้านและสำรวจรีวิวสินค้า
         </p>
         </section>
+
+
+          
+
+
 
 
         <MDBContainer>
@@ -57,6 +78,7 @@ export default function Home({ token }) {
 
 
         </MDBContainer>
+        
         </div>
     </div>
     

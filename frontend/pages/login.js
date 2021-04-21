@@ -81,6 +81,7 @@ export default function Login({ token }) {
         <title>Login</title>
       </Head>
       <div className={styles.locontainer}>
+      <div className={styles.lo1container}>
         <Navbar />
         <div className={styles.lo}>
           <h1>Login</h1>
@@ -103,6 +104,7 @@ export default function Login({ token }) {
           <hr className="hr-light" />
           
         </div> */}
+      </div>
       </div>
     </Layout>
   );

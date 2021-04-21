@@ -52,7 +52,8 @@ const NavBar = () => {
                                 <a className="nav-link">Contact</a>
                             </Link>
                         </li>
-                        <li className="nav-item red-text font-weight-bold" >
+                        {/* <li className="nav-item font-weight-bold" > */}
+                        <li className="nav-item" >
                             <Link href="/a">
                                 <a className="nav-link">Reviews</a>
                             </Link>

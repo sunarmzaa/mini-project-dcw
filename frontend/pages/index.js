@@ -29,7 +29,7 @@ export default function Home({ token }) {
         <MDBContainer>
           <MDBRow>
             <MDBCol md="12" className="mb-3">
-              <img src="https://www.tcijthai.com/office-tcij/headpicture/20803a11a27965f6cc4e8dcb554ceff9.jpg" className="img-fluid z-depth-1" alt="" />
+              <img src="https://cdn-cms.pgimgs.com/news/2017/08/20Baht_01.jpg" className={styles.bath}/>
             </MDBCol>
           </MDBRow>
           {/* <MDBRow>

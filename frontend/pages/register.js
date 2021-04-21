@@ -77,6 +77,9 @@ export default function Register({ token }) {
             <Head>
                 <title>Register</title>
             </Head>
+            {/* <div className={styles.register}> */}
+
+            <div className={styles.headre}>
             <div className={styles.recontainer}>
                 <Navbar />
                 <div className={styles.re}>
@@ -102,6 +105,9 @@ export default function Register({ token }) {
                     <button onClick={register}>Register</button>
                 </div>
             </div>
+
+</div>
+
         </Layout>
     )
 }

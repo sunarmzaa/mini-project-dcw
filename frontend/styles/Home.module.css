@@ -9,17 +9,33 @@
     margin: -30px 20px 50px;
 
 }
+.bath{
+    width: 600px;
+    height: 400px;
+}
+.register{
+    width: 250px;
+    height: 50px;
+}
 .recontainer {
-    min-height: 100vh;
+    width: 380px;
+    height: 470px;
     padding: 0 0.5rem;
     display: flex;
     flex-direction: column;
-    justify-content: unset;
+    justify-content: center;
     align-items: center;
-    background-image: url("../public/image/doc.jpg");
-    margin: -30px 0px 50px;
+    background-color: whitesmoke;
+    /* background-image: url("../public/image/doc.jpg"); */
+    margin: 10px 500px 100px;
+    border: 2px solid black;
 
 }
+.headre{
+    /* background-image: url("../public/image/doc1.jpg"); */
+    background-color: pink;
+}
+
 .re{
     margin: 50px;
 }

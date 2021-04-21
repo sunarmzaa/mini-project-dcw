@@ -22,7 +22,7 @@ const admin = ({ token }) => {
 
   //////////////////name  description price quantity  imageUrl 
   const [imageUrl, setImageUrl] = useState(emptyImageUrl);
-
+  
   const handleChangeImage = e => {
     const file = e.target.files[0];
     const reader = new FileReader();
@@ -118,7 +118,7 @@ const admin = ({ token }) => {
             <div><b>Price :</b> {item.price} <br /></div>
             <div><b>Quantity :</b> {item.quantity}</div>
             {/* <div><b>Image :</b> {item.imageUrl}</div> */}
-            <div><b>Image :</b> <img src={item.imageUrl} /></div>
+            <div><b>Image :</b> <img src={item.imageUrl } /></div>
 
             <div className={styles.edit_button}>
               <button
@@ -151,39 +151,39 @@ const admin = ({ token }) => {
   return (
     <div className={styles.container}>
       <Navbar />
-      <h1>Shop</h1>
+      <h1>Products</h1>
       <div className={styles.form_add}>
         <h2>Add Products</h2>            
 {/* name  description price quantity  imageUrl  */}
-        Name :
+        Name (ชื่อ):
         <input
           type="text"
           name="name"
           onChange={(e) => setName(e.target.value)}
         ></input>
 
-        Description :
+        Description (รายละเอียด) :
         <input
           type="text"
           name="description"
           onChange={(e) => setDescription(e.target.value)}
         ></input>
 
-        Price :
+        Price (ราคา):
         <input
           type="number"
           name="price"
           onChange={(e) => setPrice(e.target.value)}
         ></input>
 
-        Quantity :
+        Quantity (จำนวน):
         <input
           type="number"
           name="quantity"
           onChange={(e) => setQuantity(e.target.value)}
         ></input>
 
-        Image:
+        Image (รูปภาพ):
         <label className='form-control'>
           <img className='image' src={imageUrl} />
           <input className='input-file' type='file' onChange={handleChangeImage} />

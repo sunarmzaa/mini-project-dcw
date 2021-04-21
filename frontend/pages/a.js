@@ -5,6 +5,7 @@ import styles from "../styles/b.module.css";
 function App() {
   const [file, setFile] = useState(null);
   const [img, setImg] = useState([]);
+  const [description, setDescription] = useState("");
 
   useEffect(() => {
     getImageFirebase();
@@ -53,13 +54,21 @@ function App() {
       <div className={styles.head}>
         <h1>รีวิวสินค้า</h1>
       </div>
-
       <div className={styles.head}>
       <form onSubmit={handleUpload}>
         <input type="file" onChange={handleChange} />
         <button disabled={!file}>upload to firebase</button>
       </form>
+      <br></br>
+      Description (รายละเอียด) : 
+        <input
+          type="text"
+          name="description"
+          onChange={(e) => setDescription(e.target.value)}
+        ></input>
       </div>
+    
+      <br></br>
       <div style={{ display: "flex", flexWrap: "wrap" }}>
         {img.length > 0
           ? img.map((ImgUrl, index) => {
@@ -71,7 +80,7 @@ function App() {
                 <img
                   src={ImgUrl.url}
                   alt=""
-                  style={{ width: "300px", height: "300px" }}
+                  style={{ width: "150px", height: "150px" }}
                 />
               </div>
               

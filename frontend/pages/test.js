@@ -20,22 +20,22 @@ const index = () => {
     mutate(URL, data);
   }
 */
-//medicine
- //name  description price quantity  imageUrl 
+  //medicine
+  //name  description price quantity  imageUrl 
   const showShops = () => {
     if (data.list && data.list.length) {
       return data.list.map((item, index) => {
         return (
           <div className={styles.listItem} key={index}>
-            <div><b>Name :</b> {item.name}</div>
-            <div><b>Description :</b> {item.description}</div>
-            <div><b>Price :</b> {item.price} </div>
-            <div><b>Quantity :</b> {item.quantity}</div>
+            <div><b>ชื่อ :</b> {item.name}</div>
+            <div><b>รายละเอียด :</b> {item.description}</div>
+            <div><b>ราคา :</b> {item.price} บาท</div>
+            <div><b>จำนวน :</b> {item.quantity} ชิ้น</div>
             {/* <div><b>Image :</b> {item.imageUrl}</div> */}
-            <div><b>Image :</b> <img src={item.imageUrl}/></div>
+            <div><img src={item.imageUrl} style={{ width: "150px", height: "150px" }} /></div>
 
 
-            
+
           </div>
         );
       });
@@ -46,7 +46,7 @@ const index = () => {
   return (
     <div className={styles.stcontainer}><Navbar />
       <div className={styles.sttitle}>
-      Products</div>
+        สินค้า</div>
       <div className={styles.stlist}>
         {showShops()}
       </div>

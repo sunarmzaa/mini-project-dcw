@@ -5,7 +5,7 @@ import React, { useState, useEffect } from "react";
 import styles from "../styles/Index.module.css";
 import Link from 'next/link'
 import Navbar from "../components/navbar";
-const URL = "http://localhost/api/medicines";
+const URL = "http://localhost/api/shops";
 const URL_BUY = "http://localhost/api/purchase";
 const fetcher = (key) => fetch(key).then((res) => res.json());
 const index = () => {
@@ -22,7 +22,7 @@ const index = () => {
 */
 //medicine
  //name  description price quantity  imageUrl 
-  const showMedicines = () => {
+  const showShops = () => {
     if (data.list && data.list.length) {
       return data.list.map((item, index) => {
         return (
@@ -46,9 +46,9 @@ const index = () => {
   return (
     <div className={styles.stcontainer}><Navbar />
       <div className={styles.sttitle}>
-      Medicines</div>
+      Products</div>
       <div className={styles.stlist}>
-        {showMedicines()}
+        {showShops()}
       </div>
 
     </div>

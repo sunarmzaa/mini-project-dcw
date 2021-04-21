@@ -5,7 +5,7 @@ import Link from "next/link";
 import withAuth from "../components/withAuth";
 import Navbar from "../components/navbar";
 import index from "./test";
-const URL = "http://localhost/api/medicines";
+const URL = "http://localhost/api/shops";
 
 const URL_IN = "http://localhost/api/income";
 //C:\Users\Admin\Desktop\Mini Project in DCW\frontend\image\add_image.png
@@ -13,7 +13,7 @@ const emptyImageUrl = '/image/add_image.png';
 
 const admin = ({ token }) => {
   const [user, setUser] = useState({});
-  const [medicines, setMedicines] = useState({});
+  const [shops, setShops] = useState({});
   const [income, setIncome] = useState();
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
@@ -39,10 +39,10 @@ const admin = ({ token }) => {
   ///////////////
 
 
-  const [medicine, setMedicine] = useState({});
+  const [shop, setShop] = useState({});
   useEffect(() => {
     setImageUrl();
-    getMedicines();
+    getShops();
     /*    getIncome();  */
     profileUser();
 
@@ -62,10 +62,10 @@ const admin = ({ token }) => {
       console.log(e);
     }
   };
-  const getMedicineById = async (id) => {
+  const getShopById = async (id) => {
     let result = await axios.get(`${URL}/${id}`);
     console.log(result.data);
-    setMedicine(result.data);
+    setShop(result.data);
   };
   /*
     const getIncome = async () => {
@@ -73,12 +73,12 @@ const admin = ({ token }) => {
       setIncome(result.data);
     };
   */
-  const getMedicines = async () => {
+  const getShops = async () => {
     let result = await axios.get(URL);
-    setMedicines(result.data.list);
+    setShops(result.data.list);
   };
 // name  description price quantity  imageUrl 
-  const addMedicine = async () => {
+  const addShop = async () => {
     let result = await axios.post(URL, {
       name,
       description,
@@ -87,15 +87,15 @@ const admin = ({ token }) => {
       imageUrl,
     });
     console.log(result);
-    getMedicines();
+    getShops();
   };
 
-  const deleteMedicine = async (id) => {
+  const deleteShop = async (id) => {
     let result = await axios.delete(`${URL}/${id}`);
-    getMedicines();
+    getShops();
   };
 
-  const updateMedicine = async (id) => {
+  const updateShop = async (id) => {
     let result = await axios.put(`${URL}/${id}`, {
       name,
       description,
@@ -104,13 +104,13 @@ const admin = ({ token }) => {
       imageUrl,
     });
     console.log(result);
-    getMedicines();
+    getShops();
   };
 
 // name  description price quantity  imageUrl 
-  const showMedicines = () => {
-    if (medicines && medicines.length) {
-      return medicines.map((item, index) => {
+  const showShops = () => {
+    if (shops && shops.length) {
+      return shops.map((item, index) => {
         return (
           <div className={styles.listItem} key={index}>
             <div><b>Name :</b> {item.name} <br /></div>
@@ -123,19 +123,19 @@ const admin = ({ token }) => {
             <div className={styles.edit_button}>
               <button
                 className={styles.button_get}
-                onClick={() => getMedicineById(item.id)}>
+                onClick={() => getShopById(item.id)}>
                 Get
               </button>
 
               <button
                 className={styles.button_update}
-                onClick={() => updateMedicine(item.id)}>
+                onClick={() => updateShop(item.id)}>
                 Update
               </button>
 
               <button
                 className={styles.button_delete}
-                onClick={() => deleteMedicine(item.id)}>
+                onClick={() => deleteShop(item.id)}>
                 Delete
               </button>
 
@@ -151,9 +151,9 @@ const admin = ({ token }) => {
   return (
     <div className={styles.container}>
       <Navbar />
-      <h1>Medicine</h1>
+      <h1>Shop</h1>
       <div className={styles.form_add}>
-        <h2>Add Medicines</h2>            
+        <h2>Add Products</h2>            
 {/* name  description price quantity  imageUrl  */}
         Name :
         <input
@@ -191,13 +191,13 @@ const admin = ({ token }) => {
 
         <button
           className={styles.button_add}
-          onClick={() => addMedicine(name, description, price, quantity, imageUrl)}
+          onClick={() => addShop(name, description, price, quantity, imageUrl)}
         >
           Add
         </button>
       </div>
 
-      <div className={styles.list}>{showMedicines()}</div>
+      <div className={styles.list}>{showShops()}</div>
       <style jsx>{`
                 // .container1 {
                 //     padding: 12px;
@@ -232,48 +232,3 @@ export default withAuth(admin);
 export function getServerSideProps({ req, res }) {
   return { props: { token: req.cookies.token || "" } };
 }
-
-
-
-// Name :
-//         <input
-//           type="text"
-//           name="name"
-//           onChange={(e) => setName(e.target.value)}
-//         ></input>
-
-//         Surname :
-//         <input
-//           type="text"
-//           name="surname"
-//           onChange={(e) => setSurname(e.target.value)}
-//         ></input>
-
-//         Major :
-//         <input
-//           type="text"
-//           name="major"
-//           onChange={(e) => setMajor(e.target.value)}
-//         ></input>
-
-//         Gpa :
-//         <input
-//           type="number"
-//           name="gpa"
-//           onChange={(e) => setGpa(e.target.value)}
-//         ></input>
-
-//         Image:
-//         <label className='form-control'>
-//           <img className='image' src={imageUrl} />
-//           <input className='input-file' type='file' onChange={handleChangeImage} />
-//         </label>
-
-
-//         <button
-//           className={styles.button_add}
-//           onClick={() => addStudent(name, surname, major, gpa, imageUrl)}
-//         >
-//           Add
-//         </button>
-//       </div>

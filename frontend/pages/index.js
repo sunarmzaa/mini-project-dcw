@@ -18,10 +18,10 @@ export default function Home({ token }) {
         
         <section className="my-5">
           <h2 className="h1-responsive font-weight-bold text-center my-5">
-            ยินดีต้องรับเข้าสู่ "คุณหมอ"
+            ยินดีต้องรับเข้าสู่ "จะเอ๋ 20"
         </h2>
           <p className="grey-text w-responsive text-center mx-auto mb-5">
-            เว็บไซต์นี้จัดทำขึ้นเพื่อ การจัดเก็บยา
+            เว็บไซต์นี้จัดทำขึ้นเพื่อ การสต็อกสินค้าภายในร้าน
         </p>
         </section>
 

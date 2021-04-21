@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { storage } from "../firebase/firebase";
+import styles from "../styles/b.module.css";
 
 function App() {
   const [file, setFile] = useState(null);
@@ -49,26 +50,33 @@ function App() {
   };
   return (
     <div>
+      <div className={styles.head}>
+        <h1>รีวิวสินค้า</h1>
+      </div>
+
+      <div className={styles.head}>
       <form onSubmit={handleUpload}>
         <input type="file" onChange={handleChange} />
         <button disabled={!file}>upload to firebase</button>
       </form>
+      </div>
       <div style={{ display: "flex", flexWrap: "wrap" }}>
         {img.length > 0
           ? img.map((ImgUrl, index) => {
-              return (
-                <div key={index}>
-                  <p style={{ textAlign: "center" }}>
-                    {ImgUrl.name.slice(0, ImgUrl.name.length - 4)}
-                  </p>
-                  <img
-                    src={ImgUrl.url}
-                    alt=""
-                    style={{ width: "300px", height: "300px" }}
-                  />
-                </div>
-              );
-            })
+            return (
+              <div key={index}>
+                <p style={{ textAlign: "center" }}>
+                  {ImgUrl.name.slice(0, ImgUrl.name.length - 4)}
+                </p>
+                <img
+                  src={ImgUrl.url}
+                  alt=""
+                  style={{ width: "300px", height: "300px" }}
+                />
+              </div>
+              
+            );
+          })
           : "No image"}
       </div>
     </div>

@@ -82,7 +82,9 @@ export default function Login({ token }) {
       </Head>
       <div className={styles.locontainer}>
         <Navbar />
-        <h1>Login</h1>
+        <div className={styles.lo}>
+          <h1>Login</h1>
+          </div>
         <div>
           <b>Token:</b> {token.substring(0, 15)}...
           <button onClick={copyText}> Copy token </button>
@@ -92,7 +94,7 @@ export default function Login({ token }) {
         <br />
         {loginForm()}
         <div>
-            <a className="nav-link" href="/register">Register here</a>
+          <a className="nav-link" href="/register">Register here</a>
           <button onClick={login}>Login</button>
         </div>
 

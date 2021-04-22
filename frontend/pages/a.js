@@ -85,6 +85,7 @@ function App() {
                   alt=""
                   style={{ width: "150px", height: "150px" }}
                 />
+                <div><b>รีวิวสินค้า :</b> {item.description}</div>
               </div>
               
             );

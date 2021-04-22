@@ -1,13 +1,13 @@
 import Link from 'next/link'
-import { Navbar, Nav, Form } from 'react-bootstrap'
-import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardBody, MDBMask, MDBView, MDBIcon, MDBInput, MDBBtn } from "mdbreact";
+// import { Navbar, Nav, Form } from 'react-bootstrap'
+import { MDBBtn } from "mdbreact";
 
 
 const NavBar = () => {
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top ">
             <div className="container">
-                <img src="../image/shop.png" width="45px" height="45px" href="/"/>
+                <img src="../image/shop.png" width="45px" height="45px" href="/" />
                 <a className="navbar-brand" href="/">จะเอ๋ 20 </a>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
@@ -32,12 +32,12 @@ const NavBar = () => {
                             </Link>
                         </li>
                         {/* <li className="nav-item">
-                            <Link href="/profile">
+                            <Link href="/about">
                                 <a className="nav-link">Profile</a>
                             </Link>
                         </li> */}
                         <li className="nav-item">
-                            <Link href="/test">
+                            <Link href="/shop">
                                 <a className="nav-link">Products</a>
                             </Link>
 

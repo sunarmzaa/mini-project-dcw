@@ -11,3 +11,9 @@
         margin: auto auto 100px auto;
         border: 2px solid black;
     }
+
+    .head{
+        height: 550px;
+        margin: -20px auto -20px auto;
+        background-image: url("../public/image/bg1.jpg");
+    }

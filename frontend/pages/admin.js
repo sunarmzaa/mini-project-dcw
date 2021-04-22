@@ -4,7 +4,7 @@ import styles from "../styles/addmin.module.css";
 import Link from "next/link";
 import withAuth from "../components/withAuth";
 import Navbar from "../components/navbar";
-import index from "./test";
+import index from "./shop";
 const URL = "http://localhost/api/shops";
 
 const URL_IN = "http://localhost/api/income";

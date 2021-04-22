@@ -6,7 +6,7 @@ class Contact extends Component {
     state = {}
     render() {
         return (<div>
-
+            <div className={styles.head}>
             <div className={styles.profile}>
                 <h3>ติดต่อ</h3>
                 <p>นายพีรพล กุลเมือง</p>
@@ -15,7 +15,7 @@ class Contact extends Component {
                 <p>Tel : 0922293495</p>
                 <img src="../image/arm.jpg" width="250px" height="250px" />
             </div>
-
+        </div>
         </div>);
     }
 }

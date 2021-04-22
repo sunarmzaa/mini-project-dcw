@@ -7,7 +7,8 @@ const NavBar = () => {
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
             <div className="container">
-                <a className="navbar-brand" href="/">จะเอ๋ 20</a>
+                <img src="../image/shop.png" width="45px" height="45px" href="/"/>
+                <a className="navbar-brand" href="/">จะเอ๋ 20 </a>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
@@ -30,16 +31,16 @@ const NavBar = () => {
                                 <a className="nav-link">Login</a>
                             </Link>
                         </li>
-                        <li className="nav-item">
+                        {/* <li className="nav-item">
                             <Link href="/profile">
                                 <a className="nav-link">Profile</a>
                             </Link>
-                        </li>
+                        </li> */}
                         <li className="nav-item">
                             <Link href="/test">
                                 <a className="nav-link">Products</a>
                             </Link>
-                            
+
                         </li>
                         <li className="nav-item">
                             <Link href="/admin">

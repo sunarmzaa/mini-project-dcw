@@ -51,6 +51,18 @@ export default function Login({ token }) {
           onChange={(e) => setPassword(e.target.value)}
         />
       </div>
+
+
+      <div>Confirm Password:</div>
+      <div>
+        <input
+          type="password"
+          name="password"
+          placeholder="password"
+          onChange={(e) => setPassword(e.target.value)}
+        />
+      </div>
+
       <div className="flex items-center">
         <input
           id="remember_me"
@@ -86,17 +98,17 @@ export default function Login({ token }) {
         <div className={styles.lo}>
           <h1>Login</h1>
           </div>
-        <div>
+        {/* <div>
           <b>Token:</b> {token.substring(0, 15)}...
           <button onClick={copyText}> Copy token </button>
         </div>
-        <br />
+        <br /> */}
         <div>Status: {status}</div>
-        <br />
+        {/* <br /> */}
         {loginForm()}
         <div>
-          <a className="nav-link" href="/register">Register here</a>
           <button onClick={login}>Login</button>
+          <a className="nav-link" href="/register">Register here</a>
         </div>
 
         {/* <div>

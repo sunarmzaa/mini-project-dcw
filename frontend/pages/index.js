@@ -28,56 +28,25 @@ export default function Home({ token }) {
                     <animated.div style={styles}>ยินดีต้องรับเข้าสู่ "จะเอ๋ 20</animated.div>
                 )}
             </Spring>
-
-            </div>             
-            
-
-        <section className="my-5">
-          {/* <h2 className="h1-responsive font-weight-bold text-center my-5">
-            ยินดีต้องรับเข้าสู่ "จะเอ๋ 20"
-        </h2> */}
-          <p className="grey-text w-responsive text-center mx-auto mb-5">
+            </div>        
+            <p className="grey-text w-responsive text-center mx-auto mb-5">
             เว็บไซต์นี้จัดทำขึ้นเพื่อ การสต็อกสินค้าภายในร้านและสำรวจรีวิวสินค้า
         </p>
-        </section>
 
+            <div className={styles.image}>
+            <figure>
+                <img src="../image/a1.jpg"/>
+                <img src="../image/a3.jpg"/>
+                <img src="../image/a4.jpg"/>
+                <img src="../image/a5.jpg"/>
+                <img src="../image/a6.jpg"/>
+                <img src="../image/a7.jpg"/>
+                <img src="../image/a8.jpg"/>
+                <img src="../image/a9.jpg"/>
+                <img src="../image/a10.jpg"/>
+            </figure>
+        </div>
 
-          
-
-
-
-
-        <MDBContainer>
-          <MDBRow>
-            <MDBCol md="12" className="mb-3">
-              <img src="https://cdn-cms.pgimgs.com/news/2017/08/20Baht_01.jpg" className={styles.bath}/>
-            </MDBCol>
-          </MDBRow>
-          {/* <MDBRow>
-            <MDBCol lg="4" md="12" className="mb-3">
-              <img src="http://www.papamenu.com/wp-content/uploads/2017/05/%E0%B8%82%E0%B9%88%E0%B8%B2.jpg" className="img-fluid z-depth-1" alt="" />
-            </MDBCol>
-            <MDBCol lg="4" md="6" className="mb-3">
-              <img src="https://www.samunpri.com/kitchendrugs/wp-content/uploads/2017/09/%E0%B8%82%E0%B9%88%E0%B8%B2.jpg" className="img-fluid z-depth-1" alt="" />
-            </MDBCol>
-            <MDBCol lg="4" md="6" className="mb-3">
-              <img src="https://storage.thaipost.net/main/uploads/photos/big/20200707/image_big_5f045d1e22127.jpg" className="img-fluid z-depth-1" alt="" />
-            </MDBCol>
-          </MDBRow>
-          <MDBRow>
-            <MDBCol md="6" className="mb-3">
-              <img src="https://www.thaihealth.or.th/data/content/2015/05/28248/cms/thaihealth_c_dfhjnruv1569.jpg" className="img-fluid z-depth-1" alt="" />
-            </MDBCol>
-            <MDBCol md="6" className="mb-3">
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTH9e2YpNrC18iWqZrx61pqpSvSyo7GzU4W3ai9znpwU8_OBskYEUcA9EM-QSyc1-7-wWs&usqp=CAU" className="img-fluid z-depth-1" alt="" />
-            </MDBCol>
-          </MDBRow> */}
-
-            
-
-
-
-        </MDBContainer>
         
         </div>
     </div>

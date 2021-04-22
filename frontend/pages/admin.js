@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
-import styles from "../styles/Student.module.css";
+import styles from "../styles/addmin.module.css";
 import Link from "next/link";
 import withAuth from "../components/withAuth";
 import Navbar from "../components/navbar";
@@ -9,7 +9,7 @@ const URL = "http://localhost/api/shops";
 
 const URL_IN = "http://localhost/api/income";
 //C:\Users\Admin\Desktop\Mini Project in DCW\frontend\image\add_image.png
-const emptyImageUrl = '/image/add_image.png';
+// const emptyImageUrl = '/image/add_image.png';
 
 const admin = ({ token }) => {
   const [user, setUser] = useState({});
@@ -21,7 +21,7 @@ const admin = ({ token }) => {
   const [quantity, setQuantity] = useState();
 
   //////////////////name  description price quantity  imageUrl 
-  const [imageUrl, setImageUrl] = useState(emptyImageUrl);
+  const [imageUrl, setImageUrl] = useState();
   
   const handleChangeImage = e => {
     const file = e.target.files[0];
@@ -118,7 +118,7 @@ const admin = ({ token }) => {
             <div><b>Price :</b> {item.price} <br /></div>
             <div><b>Quantity :</b> {item.quantity}</div>
             {/* <div><b>Image :</b> {item.imageUrl}</div> */}
-            <div><b>Image :</b> <img src={item.imageUrl } /></div>
+            <div><b>Image :</b> <img src={item.imageUrl } style={{ width: "150px", height: "150px" }} /></div>
 
             <div className={styles.edit_button}>
               <button
@@ -147,7 +147,7 @@ const admin = ({ token }) => {
       return <p>Loading...</p>;
     }
   };
-  console.log(imageUrl);
+  // console.log(imageUrl);
   return (
     <div className={styles.container}>
       <Navbar />
@@ -155,7 +155,7 @@ const admin = ({ token }) => {
       <div className={styles.form_add}>
         <h2>Add Products</h2>            
 {/* name  description price quantity  imageUrl  */}
-        Name (ชื่อ):
+        Name (ชื่อ) :
         <input
           type="text"
           name="name"
@@ -169,21 +169,21 @@ const admin = ({ token }) => {
           onChange={(e) => setDescription(e.target.value)}
         ></input>
 
-        Price (ราคา):
+        Price (ราคา) :
         <input
           type="number"
           name="price"
           onChange={(e) => setPrice(e.target.value)}
         ></input>
 
-        Quantity (จำนวน):
+        Quantity (จำนวน) :
         <input
           type="number"
           name="quantity"
           onChange={(e) => setQuantity(e.target.value)}
         ></input>
 
-        Image (รูปภาพ):
+        Image (รูปภาพ) :
         <label className='form-control'>
           <img className='image' src={imageUrl} />
           <input className='input-file' type='file' onChange={handleChangeImage} />
@@ -197,7 +197,7 @@ const admin = ({ token }) => {
         </button>
       </div>
 
-      <div className={styles.list}>{showShops()}</div>
+      <div className={styles.addlist}>{showShops()}</div>
       <style jsx>{`
                 // .container1 {
                 //     padding: 12px;

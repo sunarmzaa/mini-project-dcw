@@ -1,0 +1,13 @@
+.profile{
+        width: 400px;
+        height: 490px;
+        padding: 0 0.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: whitesmoke;
+        /* background-image: url("../public/image/doc.jpg"); */
+        margin: auto auto 100px auto;
+        border: 2px solid black;
+    }

@@ -35,7 +35,7 @@
 
 .lo1container {
     width: 380px;
-    height: 600px;
+    height: 580px;
     padding: 0 0.5rem;
     display: flex;
     flex-direction: column;
@@ -43,7 +43,7 @@
     align-items: center;
     background-color: whitesmoke;
     /* background-image: url("../public/image/doc.jpg"); */
-    margin: 10px 500px 50px;
+    margin: 30px 500px 50px;
     border: 2px solid black;
 
 }
@@ -56,9 +56,12 @@
     margin: 50px;
 }
 .lo{
-    margin: 50px;
+    margin: 10px;
 }
 .to{
+    margin: -20px;
+}
+.headlo{
     margin: -20px;
 }
 .locontainer {
@@ -68,9 +71,9 @@
     flex-direction: column;
     justify-content: unset;
     align-items: center;
-    /* background-image: url("../public/image/doc1.jpg"); */
-    background-color: #888;
-    margin: -30px 0px 50px;
+    background-image: url("../public/image/bg3.jpg");
+    /* background-color: #888; */
+    margin: -20px 0px 0px;
 
 }
 

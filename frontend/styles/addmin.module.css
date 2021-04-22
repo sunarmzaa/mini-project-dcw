@@ -72,7 +72,6 @@
   }
   .listItem {
     width: auto;
-    height: auto;
     display: flex;
     flex-direction: column;
     margin: 20px;
@@ -96,6 +95,6 @@
     border: 2px solid red;
     font-size: 1.1rem;
     text-align: center;
-    background-color:thistle;
+    background-color:whitesmoke;
   }
   

@@ -33,8 +33,6 @@ const index = () => {
               <div><b>ราคา :</b> {item.price} บาท/ชิ้น</div>
               <div><b>มีอยู่จำนวน :</b> {item.quantity} ชิ้น</div>
             </div>
-
-
             {/* <div><b>Image :</b> {item.imageUrl}</div> */}
             <div><img src={item.imageUrl} style={{ width: "150px", height: "150px" }} /></div>
 

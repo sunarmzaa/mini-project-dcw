@@ -58,6 +58,17 @@
     padding: 2rem;
     border-radius: 5px;
 }
+.listItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width:auto;
+    align-items: left;
+    margin: 10px;
+    border: 2px solid #777;
+    padding: 2rem;
+    border-radius: 5px;
+}
 .listItem > div{
     margin: 5px 0px;
 }

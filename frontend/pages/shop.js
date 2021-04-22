@@ -27,10 +27,14 @@ const index = () => {
       return data.list.map((item, index) => {
         return (
           <div className={styles.listItem} key={index}>
-            <div><b>ชื่อ :</b> {item.name}</div>
-            <div><b>รายละเอียด :</b> {item.description}</div>
-            <div><b>ราคา :</b> {item.price} บาท</div>
-            <div><b>จำนวน :</b> {item.quantity} ชิ้น</div>
+            <div className={styles.listItem1} key={index}>
+              <div><b>ชื่อ :</b> {item.name}</div>
+              <div><b>รายละเอียด :</b> {item.description}</div>
+              <div><b>ราคา :</b> {item.price} บาท/ชิ้น</div>
+              <div><b>มีอยู่จำนวน :</b> {item.quantity} ชิ้น</div>
+            </div>
+
+
             {/* <div><b>Image :</b> {item.imageUrl}</div> */}
             <div><img src={item.imageUrl} style={{ width: "150px", height: "150px" }} /></div>
 

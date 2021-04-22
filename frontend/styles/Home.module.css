@@ -92,9 +92,9 @@
 
 
 .welcome{
-    margin: 30px;
+    margin: 32px;
     text-align: center;
-    font-size: calc(16px + 2vmin);
+    font-size: calc(30px + 2vmin);
 }
 .nav{
     color: white;

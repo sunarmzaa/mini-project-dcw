@@ -123,12 +123,16 @@ router.get(
 let shops = {
   list: [
     {
-      "id": "4010341", "name": "ไม้แขวนผ้า", "description": "1 ชิ้น", "price": " 10 ฿",
+      "id": "4010341", "name": "ไม้แขวนผ้า", "description": "ใช้แขวนเสื้อ", "price": " 10 ฿",
       "quantity": 4, "imageUrl": "https://firebasestorage.googleapis.com/v0/b/nextjs-1dafc.appspot.com/o/images%2Ft2.jpg?alt=media&token=fb505f00-5825-4aad-885f-c4f5d29b8eb0"
     },
     {
       "id": "4010342", "name": "ตะกร้าช๊อปปิ้ง สีดำหูสี", "description": "ตะกร้า", "price": 10, "quantity": 50
       , "imageUrl": 'https://firebasestorage.googleapis.com/v0/b/nextjs-1dafc.appspot.com/o/images%2Fi1.jpg?alt=media&token=95092e02-343d-4390-8605-22d611d53090'
+    },
+    {
+      "id": "4010343", "name": "ชั้นวางของ 2 ชั้น หูกระต่าย", "description": "ชั้นวางของ", "price": 20, "quantity": 50
+      , "imageUrl": 'http://www.20บาท.com/uploads/product/TF41-006(%E0%B9%83%E0%B8%AB%E0%B8%A1%E0%B9%88)_resize_20180716163846.jpg'
     }
   ],
 };

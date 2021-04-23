@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { storage } from "../firebase/firebase";
-import styles from "../styles/b.module.css";
+import styles from "../styles/review.module.css";
 
 
 function App() {
@@ -68,7 +68,8 @@ function App() {
         {img.length > 0
           ? img.map((ImgUrl, index) => {
               return (
-                <div key={index}>
+                <div className={styles.review}>   
+                ชื่อรูป<div key={index}>
                   <p style={{ textAlign: "center" }}>
                     {ImgUrl.name.slice(0, ImgUrl.name.length - 4)}
                   </p>
@@ -78,6 +79,7 @@ function App() {
                     style={{ width: "150px", height: "150px" }}
                   />
                 </div>
+</div>
               );
             })
           : "No image"}

@@ -50,7 +50,7 @@ export default function Home({ token }) {
         </div>
         <div className={styles.im}>
 
-        <img src="http://f.ptcdn.info/199/006/000/1371206800-498-o.gif" className="img-fluid z-depth-1" alt="" />
+        <img src="https://img.pikbest.com/58pic/35/44/12/95c58PICegm78BIca1b43_PIC2018.gif!bw700" className="img-fluid z-depth-1" alt="" />
 </div>
 
 

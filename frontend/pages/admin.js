@@ -113,12 +113,13 @@ const admin = ({ token }) => {
       return shops.map((item, index) => {
         return (
           <div className={styles.listItem} key={index}>
-            <div><b>Name :</b> {item.name} <br /></div>
-            <div><b>Description :</b> {item.description} <br /></div>
-            <div><b>Price :</b> {item.price} <br /></div>
-            <div><b>Quantity :</b> {item.quantity}</div>
+            <div><b>ชื่อ :</b> {item.name} <br /></div>
+            <div><b>รายละเอียด :</b> {item.description} <br /></div>
+            <div><b>ราคา :</b> {item.price} ฿<br /></div>
+            <div><b>จำนวน :</b> {item.quantity}</div>
             {/* <div><b>Image :</b> {item.imageUrl}</div> */}
-            <div><b>Image :</b> <img src={item.imageUrl } style={{ width: "150px", height: "150px" }} /></div>
+            {/* <div><b>Image :</b> <img src={item.imageUrl }/></div> */}
+            <div><img src={item.imageUrl } style={{ width: "150px", height: "150px" }} /></div>
 
             <div className={styles.edit_button}>
               <button

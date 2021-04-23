@@ -71,19 +71,23 @@
     /* border: 10px solid blue; */
   }
   .listItem {
-    width: auto;
-    display: flex;
-    flex-direction: column;
-    margin: 20px;
-    padding: 10px;
-    border: 2px solid black;
-    font-size: 1.4rem;
-    text-align: center;
     background-color: white;
+      display: flex;
+      flex-direction: column;
+      margin: 20px;
+      padding: 10px;
+      border: 2px solid green;
+      font-size: 1.4rem;
+      text-align: center;
   }
   .addlist {
     display: flex;
-    margin: auto;
+    justify-content: center;
+    list-style: none;
+    margin: 10px;
+    padding: 1px;
+    flex-wrap: wrap;
+    width: 80vw;
 }
   .form_add {
     display: flex;

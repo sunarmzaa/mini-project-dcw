@@ -2,7 +2,7 @@ import useSWR, { mutate } from "swr";
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 //import styles from "../styles/Home.module.css";
-import styles from "../styles/Index.module.css";
+import styles from "../styles/shop.module.css";
 import Link from 'next/link'
 import Navbar from "../components/navbar";
 const URL = "http://localhost/api/shops";
@@ -35,8 +35,6 @@ const index = () => {
             </div>
             {/* <div><b>Image :</b> {item.imageUrl}</div> */}
             <div><img src={item.imageUrl} style={{ width: "150px", height: "150px" }} /></div>
-
-
 
           </div>
         );

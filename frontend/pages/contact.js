@@ -1,14 +1,31 @@
 import React, { Component } from 'react';
 import styles from '../styles/contact.module.css'
+import { Spring, animated } from 'react-spring'
+
 
 
 class Contact extends Component {
     state = {}
     render() {
         return (<div>
+
+
             <div className={styles.head}>
             <div className={styles.profile}>
-                <h3>ติดต่อ</h3>
+            <div className={styles.font}>
+
+            <Spring
+                loop
+                from={{ opacity: 0, color: 'red' }}
+                to={[
+                    { opacity: 1, color: '#ffaaee' },
+                    { opacity: 0, color: 'rgb(14,26,19)' },
+                ]}>
+                {styles => (
+                    <animated.div style={styles} >ติดต่อ</animated.div>
+                )}
+            </Spring>
+            </div>
                 <p>นายพีรพล กุลเมือง</p>
                 <p>รหัสนักศึกษา 6035512024 Section 01</p>
                 <p>Email : sunarmzaa@gmail.com</p>

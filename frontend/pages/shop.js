@@ -47,6 +47,9 @@ const index = () => {
     <div className={styles.stcontainer}><Navbar />
       <div className={styles.sttitle}>
         สินค้า</div>
+        <div className={styles.new}>
+        <img src="https://www.nakhonmaesotcity.go.th/web/images/grouppage_news_photo/I0009895.gif" width="90px" height="80px"/>
+      </div>
       <div className={styles.stlist}>
         {showShops()}
       </div>

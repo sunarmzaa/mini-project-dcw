@@ -47,8 +47,13 @@ export default function Home({ token }) {
             </figure>
         </div>
 
-        
         </div>
+        <div className={styles.im}>
+
+        <img src="http://f.ptcdn.info/199/006/000/1371206800-498-o.gif" className="img-fluid z-depth-1" alt="" />
+</div>
+
+
     </div>
     
 </Layout>

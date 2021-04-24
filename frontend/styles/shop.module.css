@@ -38,7 +38,11 @@
     display: flex;
     margin: 10px;
 }
-
+.text{
+    margin: 10px;
+    text-align: center;
+    font-size: calc(30px + 2vmin);
+}
 .listItem {
     display: flex;
     flex-direction: column;

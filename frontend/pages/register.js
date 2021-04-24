@@ -82,6 +82,9 @@ export default function Register({ token }) {
             <div className={styles.headre}>
             <div className={styles.recontainer}>
                 <Navbar />
+                <div className={styles.gif}>
+        <img src="https://media.tenor.com/images/5b8eab54702e8df28ff870b4986422ae/tenor.gif" className="img-fluid z-depth-1" /><a href="/login"></a>
+        </div>
                 <div className={styles.re}>
                     <h1>Register</h1>
                 </div>
@@ -100,7 +103,12 @@ export default function Register({ token }) {
                 </div>
 
                 <div>
+                <div className={styles.button}>
                     <button onClick={register}>Register</button>
+                    </div>
+                    <div>
+          <a href="/login">Login here</a>
+        </div>
                 </div>
             </div>
 

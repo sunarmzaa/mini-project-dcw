@@ -95,7 +95,9 @@ export default function Login({ token }) {
       <div className={styles.locontainer}>
       <div className={styles.lo1container}>
         <Navbar />
-        <div className={styles.lo}>
+        <div className={styles.gif}>
+        <img src="https://c.tenor.com/W-Q9RgnuDQgAAAAj/supermarket-mart.gif" className="img-fluid z-depth-1" /><a href="/login"></a>
+        </div><div className={styles.lo}>
           <h1>Login</h1>
           </div>
         {/* <div>
@@ -107,7 +109,8 @@ export default function Login({ token }) {
         {/* <br /> */}
         {loginForm()}
         <div>
-          <button onClick={login}>Login</button>
+        <div className={styles.button}>
+          <button onClick={login}>Login</button></div>
           <a className="nav-link" href="/register">Register here</a>
         </div>
 

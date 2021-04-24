@@ -6,12 +6,21 @@
     justify-content: unset;
     align-items: center;
     background-color : whitesmoke;  
-    margin: -30px 20px 50px;
+    margin: -30px 0px 0px;
+    background-image: url("../public/image/g10.jpg");
 
+}
+.in{
+    position:absolute;
+    right: 370px;
+    margin-top: 10px;
+    width: 480px;
+    height: 140px;
 }
 .bath{
     width: 600px;
     height: 400px;
+    margin: 20px;
 }
 .register{
     width: 250px;
@@ -41,17 +50,20 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: whitesmoke;
+    background-color:whitesmoke;
     /* background-image: url("../public/image/doc.jpg"); */
     margin: 30px 500px 50px;
     border: 2px solid black;
 
 }
 .headre{
-    background-image: url("../public/image/20bath.jpg");
+    background-image: url("../public/image/g12.jpg");
     /* background-color: pink; */
+    margin: -20px 0px 0px;
 }
-
+.sta{
+    text-align: center;
+}
 .re{
     margin: 50px;
 }
@@ -71,8 +83,8 @@
     flex-direction: column;
     justify-content: unset;
     align-items: center;
-    /* background-image: url("../public/image/bg3.jpg"); */
-    background-color: #aaa;
+    background-image: url("../public/image/g11.png");
+    background-color:rgb(177, 215, 233);
     /* background-color: #888; */
     margin: -20px 0px 0px;
 
@@ -84,8 +96,18 @@
     width: 500px;
     height: 150px;
 }
+.gif{
+    position:absolute;
+    right: 10px;
+    margin-top: 200px;
+    width: 500px;
+    height: 150px;
+}
 
-
+.button{
+    text-align: center;
+    margin: 0px 0px 10px;
+}
 /*
 .bar{
     background-color: #282c34;
@@ -114,7 +136,6 @@
     align-items: center;
     justify-content:flex-start;
     font-size: calc(16px);
-    color: white;
     line-height: 2.5;
    
 }
@@ -255,7 +276,7 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: 50px;
-    box-shadow: 0px 0px 20px 5px rgb(106, 179, 33);
+    box-shadow: 0px 0px 20px 5px rgb(207, 55, 8);
     overflow: hidden;
     border-radius: 10px solid rgb(224, 120, 46);
 }

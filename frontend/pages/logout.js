@@ -19,7 +19,7 @@ export default function Logout({ token }) {
         let result = await axios.get(`${config.URL}/logout`, { withCredentials: true })
         setStatus("Logout successful")
     }
- 
+
     return (
         <Layout>
             <Head>
@@ -27,9 +27,17 @@ export default function Logout({ token }) {
             </Head>
             <div className={styles.container}>
                 <Navbar />
+                <br></br>
+                <br></br>
+                <br></br>
+
                 <h1>Logout</h1>
                 <div>
-                    <h2> {status}  </h2>
+                <div className={styles.sta}>
+                <h2> {status}  </h2> 
+                </div>               
+                    <img src="https://i.pinimg.com/originals/d0/57/d0/d057d0157678a6664132e880f117b813.gif" className="img-fluid z-depth-1" /><a href="/login"></a>
+
                 </div>
             </div>
         </Layout>

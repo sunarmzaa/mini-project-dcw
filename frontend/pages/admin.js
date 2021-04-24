@@ -4,8 +4,8 @@ import styles from "../styles/addmin.module.css";
 import Link from "next/link";
 import withAuth from "../components/withAuth";
 import Navbar from "../components/navbar";
-import index from "./shop";
 const URL = "http://localhost/api/shops";
+import { Spring, animated } from 'react-spring'
 
 const URL_IN = "http://localhost/api/income";
 //C:\Users\Admin\Desktop\Mini Project in DCW\frontend\image\add_image.png
@@ -154,7 +154,22 @@ const admin = ({ token }) => {
   return (
     <div className={styles.container}>
       <Navbar />
-      <h1>Products</h1>
+      
+      <div className={styles.text}>
+      <Spring
+                loop
+                from={{ opacity: 0, color: 'red' }}
+                to={[
+                    { opacity: 1, color: '#ffaaee' },
+                    { opacity: 0, color: 'rgb(14,26,19)' },
+                ]}>
+                {styles => (
+                    <animated.div style={styles}>สินค้า</animated.div>
+                )}
+            </Spring>
+
+</div>
+
       <div className={styles.form_add}>
         <h2>Add Products</h2>            
 {/* name  description price quantity  imageUrl  */}
@@ -201,32 +216,7 @@ const admin = ({ token }) => {
       </div>
 
       <div className={styles.addlist}>{showShops()}</div>
-      <style jsx>{`
-                // .container1 {
-                //     padding: 12px;
-                //     border: 1px solid var(--gray-light2);
-                //     border-radius: 6px;
-                //     max-width: 350px;
-                // }
-                // input, textarea {
-                //     border: 1px solid var(--gray-light2);
-                //     border-radius: 6px;
-                //     padding: 8px;
-                // }
-                // .form-control, p {
-                //     margin-bottom: 4px;
-                //     display: flex;
-                //     flex-direction: column;
-                // }
-                // .image1 {
-                //     width: 80px;
-                //     height: 80px;
-                //     cursor: pointer;
-                // }
-                // .input-file1 {
-                //     display: none;
-                // }
-            `}</style>
+      
     </div>
   );
 };

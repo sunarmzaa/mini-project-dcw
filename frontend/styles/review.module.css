@@ -1,6 +1,5 @@
 .head{
     text-align: center;
-    margin-top: 20px;
 }
 
 .review{
@@ -13,5 +12,14 @@
     border: 2px solid #777;
     padding: 1rem;
     border-radius: 5px;
-    background-color: #fff;
+    background-color:white;
+}
+.con{
+    background-color:rgb(216, 245, 207);
+    margin: -20px 0px auto;
+}
+.welcome{
+    margin: 5px;
+    text-align: center;
+    font-size: calc(30px + 2vmin);
 }

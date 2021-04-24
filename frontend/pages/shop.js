@@ -46,23 +46,21 @@ const index = () => {
   };
   return (
     <div className={styles.stcontainer}><Navbar />
-      <div className={styles.sttitle}>
-      <div className={styles.text}>
-      <Spring
-                loop
-                from={{ opacity: 0, color: 'red' }}
-                to={[
-                    { opacity: 1, color: '#ffaaee' },
-                    { opacity: 0, color: 'rgb(14,26,19)' },
-                ]}>
-                {styles => (
-                    <animated.div style={styles}>สินค้า</animated.div>
-                )}
-            </Spring>
-
-</div></div>
-        <div className={styles.new}>
-        <img src="https://www.nakhonmaesotcity.go.th/web/images/grouppage_news_photo/I0009895.gif" width="90px" height="80px"/>
+        <div className={styles.text}>
+          <Spring
+            loop
+            from={{ opacity: 0, color: 'red' }}
+            to={[
+              { opacity: 1, color: '#ffaaee' },
+              { opacity: 0, color: 'rgb(14,26,19)' },
+            ]}>
+            {styles => (
+              <animated.div style={styles}>สินค้า</animated.div>
+            )}
+          </Spring>
+      </div>
+      <div className={styles.new}>
+        <img src="https://www.nakhonmaesotcity.go.th/web/images/grouppage_news_photo/I0009895.gif" width="90px" height="80px" />
       </div>
       <div className={styles.stlist}>
         {showShops()}

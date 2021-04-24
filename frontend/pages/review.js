@@ -67,7 +67,7 @@ function App() {
             { opacity: 0, color: 'rgb(14,26,19)' },
         ]}>
         {styles => (
-            <animated.div style={styles}>ยินดีต้องรับเข้าสู่ร้าน "จะเอ๋ 20</animated.div>
+            <animated.div style={styles}>รีวิวสินค้าร้าน "จะเอ๋ 20</animated.div>
         )}
     </Spring>
     </div>        

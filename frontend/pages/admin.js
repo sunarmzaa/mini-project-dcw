@@ -117,7 +117,7 @@ const admin = ({ token }) => {
             <div><b>ชื่อ :</b> {item.name} <br /></div>
             <div><b>รายละเอียด :</b> {item.description} <br /></div>
             <div><b>ราคา :</b> {item.price} บาท<br /></div>
-            <div><b>จำนวน :</b> {item.quantity} ชิ้น</div>
+            <div><b>มีอยู่จำนวน :</b> {item.quantity} ชิ้น</div>
             {/* <div><b>Image :</b> {item.imageUrl}</div> */}
             {/* <div><b>Image :</b> <img src={item.imageUrl }/></div> */}
             </div>
@@ -194,7 +194,7 @@ const admin = ({ token }) => {
           onChange={(e) => setPrice(e.target.value)}
         ></input>
 
-        Quantity (จำนวน) :
+        Quantity (มีอยู่จำนวน) :
         <input
           type="number"
           name="quantity"
